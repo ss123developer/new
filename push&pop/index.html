@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add and Remove Input Field Dynamically new 232</title>
+	<script>
+		function addInput() {
+			var newInput = document.createElement("input", "button");
+			newInput.type = "text";
+			// newInput.name = "input[]";
+			newInput.type = "button";
+			newInput.name = "button";
+			var container = document.getElementById("input-container");
+			container.appendChild(newInput,button);
+		}
+
+		function removeInput() {
+			var container = document.getElementById("input-container");
+			var lastInput = container.lastElementChild;
+			if (lastInput) {
+				container.removeChild(lastInput);
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Add/Remove Input Field Dynamically</h1>
+	<form>
+		<div id="input-container">
+            <label for="name-id">Name:</label>
+			<input type="text" name="input[]" id="name-id">
+			<button id="button" type="button" onclick="addInput()">Add Input Field</button>
+		<button  id="button"  type="button" onclick="removeInput()">Remove Input Field</button>
+		</div>
+		
+		
+	
+	</form>
+</body>
+</html>
